@@ -6,8 +6,6 @@ import uvicorn                                # Used for running the app
 
 # Configuration
 app = FastAPI()                      # Specify the "app" that will run the routing
- # Mount the static directory
-app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Example route: return a static HTML page
 @app.get("/", response_class=HTMLResponse)
